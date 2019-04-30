@@ -1,0 +1,37 @@
+{
+    "inbounds": [
+        {
+            "protocol": "socks",
+            "listen": "127.0.0.1",
+            "port": 1086,
+            "settings": {
+                "udp": true
+            }
+        },
+        {
+            "protocol": "http",
+            "listen": "127.0.0.1",
+            "port": 1087
+        }
+    ],
+    "outbounds": [{
+        "protocol": "vmess",
+        "settings": {
+            "vnext": [{
+                "address": "R_ADDRESS",
+                "port": 443,
+                "users": [{
+                    "id": "R_ID",
+                    "alterId": 64
+                }]
+            }]
+        },
+        "streamSettings": {
+            "network": "ws",
+            "security": "tls",
+            "wsSettings": {
+                "path": "R_PATH"
+            }
+        }
+    }]
+}

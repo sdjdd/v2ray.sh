@@ -1,0 +1,75 @@
+{
+    "inbounds": [
+        {
+            "protocol": "socks",
+            "listen": "127.0.0.1",
+            "port": 1086,
+            "settings": {
+                "udp": true
+            }
+        },
+        {
+            "protocol": "http",
+            "listen": "127.0.0.1",
+            "port": 1087
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        },
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [{
+                    "address": "R_ADDRESS",
+                    "port": 443,
+                    "users": [{
+                        "id": "R_ID",
+                        "alterId": 64
+                    }]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "wsSettings": {
+                    "path": "R_PATH"
+                }
+            },
+            "tag": "proxy"
+        }
+    ],
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "type": "field",
+                "outboundTag": "proxy",
+                "domain": [
+                    "domain:appspot.com",
+
+                    "domain:bit.ly",
+
+                    "domain:dartlang.org",
+
+                    "domain:gmail.com",
+                    "domain:golang.org",
+                    "domain:google.com",
+                    "domain:googleusercontent.com",
+
+                    "domain:instagram.com",
+
+                    "domain:t.co",
+                    "domain:twitter.com",
+
+                    "domain:v2ray.com",
+
+                    "domain:wikipedia.org",
+
+                    "domain:youtube.com"
+                ]
+            }
+        ]
+    }
+}
