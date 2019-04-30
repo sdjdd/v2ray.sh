@@ -47,29 +47,15 @@
                 "type": "field",
                 "outboundTag": "proxy",
                 "domain": [
-                    "domain:appspot.com",
-
                     "domain:bit.ly",
-
                     "domain:dartlang.org",
-
-                    "domain:gmail.com",
-                    "domain:golang.org",
-                    "domain:google.com",
-                    "domain:googleusercontent.com",
-
-                    "domain:instagram.com",
-
                     "domain:matcha-jp.com",
-
-                    "domain:t.co",
-                    "domain:twitter.com",
-
                     "domain:v2ray.com",
-
                     "domain:wikipedia.org",
 
-                    "domain:youtube.com"
+                    "geosite:google",
+                    "geosite:instagram",
+                    "geosite:twitter"
                 ]
             }
         ]
