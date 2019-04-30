@@ -4,7 +4,7 @@
 
 ### 0. 准备工作
 
-导入 v2ray 目录
+设置 v2ray 目录
 
 ```bash
 export v2ray_path='/path/to/v2ray'
