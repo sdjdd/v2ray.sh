@@ -38,4 +38,7 @@ case $1 in
     'stop')
         stop
         ;;
+    *)
+        echo 'invalid param: only run as router or global'
+        ;;
 esac
