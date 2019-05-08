@@ -24,14 +24,11 @@ stop() {
 }
 
 case $1 in
-    'start')
-        start
-        ;;
-    'router')
+    'r'|'router')
         config='router'
         start
         ;;
-    'global')
+    'g'|'global')
         config='global'
         start
         ;;
