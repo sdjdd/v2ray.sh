@@ -49,14 +49,17 @@
                 "domain": [
                     "domain:bit.ly",
                     "domain:dartlang.org",
+                    "domain:lang-8.com",
                     "domain:matcha-jp.com",
                     "domain:medium.com",
                     "domain:v2ray.com",
                     "domain:wikipedia.org",
+                    "domain:yahoo.co.jp",
 
                     "geosite:google",
                     "geosite:instagram",
-                    "geosite:twitter"
+                    "geosite:twitter",
+                    "geosite:yahoo"
                 ]
             }
         ]
