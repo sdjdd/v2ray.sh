@@ -47,6 +47,7 @@
                 "type": "field",
                 "outboundTag": "proxy",
                 "domain": [
+                    "domain:bintray.com",
                     "domain:bit.ly",
                     "domain:dartlang.org",
                     "domain:godoc.org",
