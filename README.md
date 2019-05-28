@@ -1,13 +1,19 @@
 ## 自用 v2ray 脚本
 
-暂时未找到 MacOS 下合适的图形客户端（v2rayX 也太难用了吧），遂制作该启动脚本。
+暂时未找到 MacOS 下合适的图形客户端（V2rayX 也太难用了吧），遂制作该启动脚本。
 
 ### 0. 准备工作
 
-设置 v2ray 目录
+设置 `v2ray` 目录
 
 ```bash
 export v2ray_path='/path/to/v2ray'
+```
+
+设置 `v2ray.sh` 快捷命令
+
+```bash
+alias v2ray='/path/to/v2ray.sh'
 ```
 
 ### 1. 生成配置
@@ -20,15 +26,15 @@ export v2ray_path='/path/to/v2ray'
 
 ### 2. 启动路由代理
 ```bash
-./v2ray router
+v2ray r
 ```
 
 ### 3. 启动全局代理
 ```bash
-./v2ray global
+v2ray g
 ```
 
 ### 4. 关闭代理
 ```bash
-./v2ray stop
+v2ray stop
 ```
