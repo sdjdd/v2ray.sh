@@ -57,6 +57,8 @@
                     "domain:wikipedia.org",
                     "domain:yahoo.co.jp",
 
+                    "full:gist.github.com",
+
                     "geosite:google",
                     "geosite:instagram",
                     "geosite:twitter",
