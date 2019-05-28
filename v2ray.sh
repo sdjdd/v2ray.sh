@@ -18,7 +18,7 @@ start() {
         done
     fi
 
-    $v2ray_path/v2ray -config $working_dir/$config.json >> /dev/null &
+    $v2ray_bin -config $working_dir/${config}.json >> /dev/null &
     echo -n $! > $pid_file
 
     echo "v2ray run as $config"

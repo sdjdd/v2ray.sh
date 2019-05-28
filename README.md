@@ -4,10 +4,10 @@
 
 ### 0. 准备工作
 
-设置 `v2ray` 目录
+设置 `v2ray` 路径
 
 ```bash
-export v2ray_path='/path/to/v2ray'
+export v2ray_bin='/path/to/v2ray'
 ```
 
 设置 `v2ray.sh` 快捷命令
