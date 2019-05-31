@@ -9,16 +9,27 @@ proxy_types=(
     "socksfirewall"
 )
 
+kill_by_pid() {
+    ps -p $1 | grep v2ray > /dev/null
+    if [[ $? -eq 0 ]]; then
+        kill $1
+    fi
+}
+
+set_sys_proxy_stat() {
+    for type in ${proxy_types[@]}; do
+        networksetup -set${type}proxystate Wi-Fi $1
+    done
+}
+
 start() {
     if [[ -f $pid_file ]]; then
-        kill `cat $pid_file`
+        kill_by_pid `cat $pid_file`
     else
-        for type in ${proxy_types[@]}; do
-            networksetup -set${type}proxystate Wi-Fi on
-        done
+        set_sys_proxy_stat on
     fi
 
-    $v2ray_bin -config $working_dir/${config}.json >> /dev/null &
+    $v2ray_bin -config $working_dir/${config}.json > /dev/null &
     echo -n $! > $pid_file
 
     echo "v2ray run as $config"
@@ -26,12 +37,10 @@ start() {
 
 stop() {
     if [[ -f $pid_file ]]; then
-        kill `cat $pid_file`
+        kill_by_pid `cat $pid_file`
         rm $pid_file
 
-        for type in ${proxy_types[@]}; do
-            networksetup -set${type}proxystate Wi-Fi off
-        done
+        set_sys_proxy_stat off
 
         echo 'v2ray stopped'
     else
@@ -52,6 +61,7 @@ case $1 in
         stop
         ;;
     *)
-        echo 'invalid param: only run as router or global'
+        echo "invalid param: $1, only run as (r)outer or (g)lobal"
+        exit 1
         ;;
 esac
