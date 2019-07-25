@@ -49,21 +49,18 @@
                 "domain": [
                     "domain:bintray.com",
                     "domain:bit.ly",
-                    "domain:dartlang.org",
-                    "domain:godoc.org",
                     "domain:matcha-jp.com",
                     "domain:medium.com",
-                    "domain:reddit.com",
-                    "domain:v2ray.com",
-                    "domain:wikipedia.org",
-                    "domain:yahoo.co.jp",
 
                     "full:gfw.go101.org",
                     "full:gist.github.com",
 
                     "geosite:google",
                     "geosite:instagram",
+                    "geosite:reddit",
                     "geosite:twitter",
+                    "geosite:v2ray",
+                    "geosite:wikimedia",
                     "geosite:yahoo"
                 ]
             }
